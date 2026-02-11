@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import pyvista as pv
 from resting_bead import resting_bead
 import traceback
@@ -123,3 +124,5 @@ pl.add_key_event("Escape", clear_selection)
 toggle_select_mode()
 pl.show_axes()
 pl.show()
+
+np.savetxt("centers.txt", state.spheres, header="r x y z", comments="")
